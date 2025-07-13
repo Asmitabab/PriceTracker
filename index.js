@@ -136,8 +136,9 @@ const startTracking = async (intervalId) => {
         await page.setUserAgent(
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
         );
-        await page.goto(Url);
-        await page.reload();
+        await page.goto(Url, { waitUntil: "networkidle2" }); // Waits for full page load
+await page.waitForSelector(".a-price-whole", { timeout: 10000 }); // Wait for price to appear
+
 
         let price = await page.evaluate(() => {
             const priceElement = document.querySelector(".a-price-whole");
