@@ -44,8 +44,8 @@ A fullstack app built with **React**, **Node.js**, **Express**, **Puppeteer**, a
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Asmitabab/pricetracker.git
-cd pricetracker
+git clone https://github.com/Asmitabab/PriceTracker.git
+cd PriceTracker
 ```
 
 ### 2. Backend Setup
